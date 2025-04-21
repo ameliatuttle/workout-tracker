@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ameliatuttle/workout-tracker/static/css/main.f764e8fd.css",
-    "main.js": "/ameliatuttle/workout-tracker/static/js/main.a36efc82.js",
-    "static/js/453.13d8c390.chunk.js": "/ameliatuttle/workout-tracker/static/js/453.13d8c390.chunk.js",
-    "index.html": "/ameliatuttle/workout-tracker/index.html",
-    "main.f764e8fd.css.map": "/ameliatuttle/workout-tracker/static/css/main.f764e8fd.css.map",
-    "main.a36efc82.js.map": "/ameliatuttle/workout-tracker/static/js/main.a36efc82.js.map",
-    "453.13d8c390.chunk.js.map": "/ameliatuttle/workout-tracker/static/js/453.13d8c390.chunk.js.map"
+    "main.css": "/workout-tracker/static/css/main.f764e8fd.css",
+    "main.js": "/workout-tracker/static/js/main.4fb0984a.js",
+    "static/js/453.13d8c390.chunk.js": "/workout-tracker/static/js/453.13d8c390.chunk.js",
+    "index.html": "/workout-tracker/index.html",
+    "main.f764e8fd.css.map": "/workout-tracker/static/css/main.f764e8fd.css.map",
+    "main.4fb0984a.js.map": "/workout-tracker/static/js/main.4fb0984a.js.map",
+    "453.13d8c390.chunk.js.map": "/workout-tracker/static/js/453.13d8c390.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f764e8fd.css",
-    "static/js/main.a36efc82.js"
+    "static/js/main.4fb0984a.js"
   ]
 }

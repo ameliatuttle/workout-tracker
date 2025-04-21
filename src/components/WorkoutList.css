@@ -1,0 +1,184 @@
+.workout-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.workout-list-header h2 {
+  color: #ff4d1c;
+  font-size: 28px;
+  margin: 0;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.workout-list-header h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #ff4d1c, #ff6b35);
+  border-radius: 2px;
+}
+
+.add-workout-btn {
+  background: linear-gradient(135deg, #ff4d1c, #ff6b35);
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 77, 28, 0.2);
+}
+
+.add-workout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 77, 28, 0.3);
+}
+
+.no-workouts {
+  text-align: center;
+  padding: 60px 0;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  color: #666;
+  font-size: 16px;
+}
+
+.month-group {
+  margin-bottom: 40px;
+}
+
+.month-header {
+  font-size: 20px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.month-header:after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, #ff4d1c, #ff6b35);
+}
+
+.month-workouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.workout-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.workout-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff4d1c, #ff6b35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  border-color: #ff6b35;
+}
+
+.workout-card:hover:before {
+  opacity: 1;
+}
+
+.workout-card-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.workout-card-date:before {
+  content: '📅';
+  font-size: 16px;
+}
+
+.workout-card-title {
+  margin: 8px 0 12px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.workout-card-details {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.workout-card-details p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.workout-card-details p:first-child:before {
+  content: '💪';
+}
+
+.workout-card-details p:last-child:before {
+  content: '🔄';
+}
+
+@media (max-width: 600px) {
+  .workout-list-header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  
+  .workout-list-header h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .add-workout-btn {
+    text-align: center;
+  }
+  
+  .workout-card {
+    padding: 15px;
+  }
+}

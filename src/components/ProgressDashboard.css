@@ -1,0 +1,241 @@
+/* src/components/ProgressDashboard.css */
+.progress-dashboard {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .no-exercises,
+  .no-data {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+  }
+  
+  .exercise-selector {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .exercise-selector label {
+    font-weight: 500;
+  }
+  
+  .exercise-selector select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    min-width: 200px;
+  }
+  
+  .progress-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .stat-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .stat-card h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .stat-change {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  
+  .stat-change.positive {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .stat-change.negative {
+    background-color: #ffebee;
+    color: #c62828;
+  }
+  
+  .stat-label {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .progress-chart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .progress-chart h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .chart-container {
+    display: flex;
+    height: 300px;
+  }
+  
+  .chart-y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 10px;
+    width: 50px;
+  }
+  
+  .y-axis-label {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+  }
+  
+  .chart-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chart-bars {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    min-height: 200px;
+  }
+  
+  .chart-bars::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    border-top: 1px dashed #eee;
+  }
+  
+  .chart-bars::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 1px dashed #eee;
+  }
+  
+  .chart-bar-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  
+  .chart-bar {
+    width: 20px;
+    background-color: #4caf50;
+    border-radius: 2px 2px 0 0;
+    transition: height 0.3s;
+    min-height: 2px;
+    margin-bottom: 4px;
+  }
+  
+  .chart-bar-label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .chart-x-axis {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+  }
+  
+  .x-axis-label {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .exercise-history {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exercise-history h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .history-table th,
+  .history-table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .history-table th {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .history-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 600px) {
+    .progress-stats {
+      grid-template-columns: 1fr;
+    }
+    
+    .chart-container {
+      height: 200px;
+    }
+    
+    .chart-bar {
+      width: 16px;
+    }
+    
+    .x-axis-label {
+      font-size: 10px;
+      transform: rotate(-45deg);
+      white-space: nowrap;
+    }
+  }
